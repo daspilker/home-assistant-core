@@ -1,0 +1,9 @@
+{
+  "domain": "abfall",
+  "name": "Abfall",
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://github.com/home-assistant/example-custom-config/tree/master/custom_components/example_sensor/",
+  "iot_class": "local_polling",
+  "requirements": []
+}
