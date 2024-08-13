@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers.discovery import load_platform
 from homeassistant.helpers.typing import ConfigType
 
 DOMAIN = "abfall"
@@ -10,9 +12,7 @@ DOMAIN = "abfall"
 
 def setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Your controller/hub specific code."""
-    # Data that you want to share with your platforms
-    hass.data[DOMAIN] = {"temperature": 24}
 
-    hass.helpers.discovery.load_platform("sensor", DOMAIN, {}, config)
+    load_platform(hass, Platform.SENSOR, DOMAIN, {}, config)
 
     return True

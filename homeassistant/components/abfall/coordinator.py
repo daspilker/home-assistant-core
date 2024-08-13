@@ -18,10 +18,10 @@ NAMES = {
 }
 
 COLORS = {
-    "HaslohP": "blue",
-    "HaslohR": "black",
-    "HaslohB": "brown",
-    "HaslohDSD": "yellow",
+    "HaslohP": "#1E90FF",
+    "HaslohR": "#808080",
+    "HaslohB": "#8B4513",
+    "HaslohDSD": "#FFD700",
 }
 
 URL = "https://pi-abfallapp.regioit.de/abfall-app-pi/rest/strassen/15020873/termine?fraktion=0&fraktion=4&fraktion=5&fraktion=7"  # codespell:ignore
@@ -57,7 +57,7 @@ class AbfallCoordinator(DataUpdateCoordinator[list[WasteCollection]]):
             hass,
             _LOGGER,
             name="My sensor",
-            update_interval=timedelta(seconds=30),
+            update_interval=timedelta(hours=12),
             always_update=True,
         )
         self._session = async_get_clientsession(self.hass)

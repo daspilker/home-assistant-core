@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from homeassistant.components.sensor import SensorEntity
+from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
@@ -37,7 +38,7 @@ class AbfallSensor(CoordinatorEntity[AbfallCoordinatorType], SensorEntity):
         super().__init__(coordinator)
         self._index = index
         self._attr_unique_id = f"waste_{index}"
-        self.entity_id = f"sensor.waste_{index}"
+        self.entity_id = f"{Platform.SENSOR}.waste_{index}"
         self._attr_icon = "mdi:trash-can"
         self.update()
 
