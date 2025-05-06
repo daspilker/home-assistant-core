@@ -6131,7 +6131,7 @@
       "config_flow": true,
       "iot_class": "local_polling"
     },
-    "solarman_api": {
+    "solarman": {
       "name": "Solarman Cloud",
       "integration_type": "service",
       "config_flow": true,

@@ -1,9 +1,9 @@
 {
-  "domain": "solarman_api",
+  "domain": "solarman",
   "name": "Solarman Cloud",
   "codeowners": ["@daspilker"],
   "config_flow": true,
-  "documentation": "https://www.home-assistant.io/integrations/solarman_api",
+  "documentation": "https://www.home-assistant.io/integrations/solarman",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "quality_scale": "bronze",

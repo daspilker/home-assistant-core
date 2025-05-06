@@ -1,1 +1,1 @@
-"""Tests for the solarman_api integration."""
+"""Tests for the solarman integration."""
